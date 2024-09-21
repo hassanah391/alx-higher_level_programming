@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
+    if len(my_list) == 0:
+        return 0
     uniq_numbers = [my_list[0]]
     is_uniq = True
     sum = my_list[0]
