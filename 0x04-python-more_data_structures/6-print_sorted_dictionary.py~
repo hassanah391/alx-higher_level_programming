@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+def print_sorted_dictionary(a_dictionary):
+    sortedBykeys = dict(sorted(a_dictionary.items()))
+    return sortedBykeys
