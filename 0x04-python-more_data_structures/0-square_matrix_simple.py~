@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def square_matrix_simple(matrix=[]):
+
+    matrixCopy = matrix.copy()
+
+    matrixSqr = map(lambda x: x ** 2, matrixCopy)
+
+    return matrixSqr
