@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+""" This module for square class """
+
+
+class Square:
+    def __init__(self, s=0):
+        if type(s) is not int:
+            raise TypeError("size must be an integer")
+        elif s < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.size = s
