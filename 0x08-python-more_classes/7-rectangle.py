@@ -5,6 +5,7 @@
 class Rectangle:
     """ a class for creating a rectangle """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
@@ -66,7 +67,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return f""
 
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+        return "\n".join([str(self.print_symbol) * self.__width
+                          for _ in range(self.__height)])
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
