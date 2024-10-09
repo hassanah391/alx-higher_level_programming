@@ -1,7 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+"""Module to solve the N Queens problem."""
 import sys
 
+
 def is_safe(board, row, col, n):
+    """Check if it's safe to place a queen at board[row][col]."""
     # Check this row on left side
     for i in range(col):
         if board[row][i] == 1:
@@ -19,13 +22,17 @@ def is_safe(board, row, col, n):
 
     return True
 
+
 def solve_nqueens(n):
+    """Solve the N Queens problem and return all solutions."""
     board = [[0 for _ in range(n)] for _ in range(n)]
     solutions = []
     solve_nqueens_util(board, 0, n, solutions)
     return solutions
 
+
 def solve_nqueens_util(board, col, n, solutions):
+    """Utility function to solve N Queens problem using backtracking."""
     if col >= n:
         solution = []
         for i in range(n):
@@ -41,11 +48,15 @@ def solve_nqueens_util(board, col, n, solutions):
             solve_nqueens_util(board, col + 1, n, solutions)
             board[i][col] = 0
 
+
 def print_solutions(solutions):
+    """Print all solutions."""
     for solution in solutions:
         print(solution)
 
+
 def main():
+    """Main function to handle input and solve the N Queens problem."""
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
@@ -62,6 +73,7 @@ def main():
 
     solutions = solve_nqueens(n)
     print_solutions(solutions)
+
 
 if __name__ == "__main__":
     main()
