@@ -32,11 +32,11 @@ Files are numbered and demonstrate the following concepts:
 
 ## Environment
 
-- **Language:** Python 3.9.5
+- **Language:** Python 3.8.5
 - **OS:** Ubuntu 20.04 LTS
 - **Compiler:** python3
 - **Style Guidelines:**
-  - [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/)
+  - [pycodestyle (version 2.8.0)](https://pycodestyle.pycqa.org/en/2.8.0/)
   - [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
 
 ## Author
