@@ -5,7 +5,7 @@ This repository is dedicated to exploring and understanding object-oriented prog
 ## Environment
 
 - **Languages:**
-  - Python 3.9.5
+  - Python 3.8.5
   - MySQL
   - SQLAlchemy
   - JavaScript ES6
@@ -14,7 +14,7 @@ This repository is dedicated to exploring and understanding object-oriented prog
 - **Operating System:** Ubuntu 20.04 LTS
 
 - **Style Guidelines:**
-  - [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/)
+  - [Pycodestyle (version 2.8.0)](https://pycodestyle.pycqa.org/en/2.8.0/)
   - [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
   - [JavaScript Standard](https://standardjs.com/rules.html)
   - [JavaScript Semistandard](https://github.com/Flet/semistandard)
