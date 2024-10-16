@@ -7,6 +7,9 @@ Module 2-is_same_class contains:
 
 
 def is_same_class(obj, a_class):
-    """ returns true if obj an instance of a_class
-    otherwise retuen false """
+    """
+    Return:
+    true if obj an instance of a_class
+    otherwise retuen false
+    """
     return type(obj) == a_class
