@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-Module 8-rectangle contains:
+Module 9-rectangle contains:
 parent class BaseGeometry
 with public instance method area and integer_validator
 
@@ -18,6 +18,7 @@ class Rectangle(BaseGeometry):
     """inherits from BaseGeometry
     Methods:
         __init__(self, width, height)
+        area(self)
     """
     def __init__(self, width, height):
         """validate and initialize width and height
@@ -29,3 +30,10 @@ class Rectangle(BaseGeometry):
         self.__width = width
         super().integer_validator("height", height)
         self.__height = height
+
+    def area(self):
+        """ returns area of a rectangle """
+        return self.__width * self.__height
+
+    def __str__(self):
+        return f"[Rectangle] {self.__width}/{self.__height}"
