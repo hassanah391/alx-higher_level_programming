@@ -12,5 +12,5 @@ def read_file(filename=""):
     Args:
         filename (string): the name of the file to read
     """
-    with open(filename, 'r', encoding="utf-8") as f:
-        print(f.read())
+    with open(filename, mode='r', encoding="utf-8") as f:
+        print(f.read(), end="")
