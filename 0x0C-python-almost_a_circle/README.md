@@ -1,4 +1,4 @@
-## Python Project: Inheritance and Unit Tests
+## Python Project: Almost a circle
 
 ### Overview
 This repository contains a collection of Python classes with inheritance relationships, along with accompanying unit tests. The project serves as a review of key Python concepts and demonstrates the implementation of unit testing.
@@ -15,7 +15,7 @@ The project is organized into the following folders:
 - **Operating System**: Ubuntu 20.04 LTS
 - **Compiler**: `python3`
 - **Style Guidelines**:
-  - [PEP 8 (version 2.8.0)](https://pycodestyle.pycqa.org/en/2.8.0/) - Python's official style guide
+  - [Pycodestyle (version 2.8.0)](https://pycodestyle.pycqa.org/en/2.8.0/) - Python's official style guide
   - [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) - Formatting of Python docstrings
 
 ### Author
