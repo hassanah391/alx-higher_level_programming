@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
 
-A unit test for rectangle class
-# Run python3 -m unittest discover tests
-# Run python3 -m unittest tests/test_models/test_base.py
+A unit test for rectangle class, Run one of these commands:
+# python3 -m unittest discover tests
+# python3 -m unittest tests/test_models/test_rectangle.py
 """
 
 
@@ -30,11 +30,30 @@ class TestRectangle(unittest.TestCase):
         Rec = Rectangle(10, 20)
         Rec.width = 3000
         Rec.height = 4000
-        Rec.x = 3.1
-        Rec.y = 4.2
+        Rec.x = 3
+        Rec.y = 4
         self.assertEqual(Rec.width, 3000)
         self.assertEqual(Rec.height, 4000)
-        self.assertEqual(Rec.x, 3.1)
-        self.assertEqual(Rec.y, 4.2)
+        self.assertEqual(Rec.x, 3)
+        self.assertEqual(Rec.y, 4)
+
+    def test_exceptions_atrributes(self):
+        Rec = Rectangle(10, 20)
+        # test TypeError exception
+        with self.assertRaises(TypeError):
+            Rec.height = "string"
+        with self.assertRaises(TypeError):
+            Rec.width = "string"
+        with self.assertRaises(TypeError):
+            Rec.x = "string"
+        with self.assertRaises(TypeError):
+            Rec.y = "string"
+        # test ValueError exception
         with self.assertRaises(ValueError):
-            Rec.width = -200
+            Rec.height = 0
+        with self.assertRaises(ValueError):
+            Rec.width = -100
+        with self.assertRaises(ValueError):
+            Rec.x = -1
+        with self.assertRaises(ValueError):
+            Rec.y = -2
