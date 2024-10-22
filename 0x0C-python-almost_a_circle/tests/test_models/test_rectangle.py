@@ -66,3 +66,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.area(), 20)
         r3 = Rectangle(8, 7)
         self.assertEqual(r3.area(), 56)
+
+    def test_str(self):
+        r1 = Rectangle(2, 4, 5, 10, 1001)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1001) 5/10 - 2/4")
+        r2 = Rectangle(5, 5, 1, id=7)
+        self.assertEqual(r2.__str__(), "[Rectangle] (7) 1/0 - 5/5")
