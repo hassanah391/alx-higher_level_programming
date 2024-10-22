@@ -14,7 +14,10 @@ Attributes:
     -__y -> y
 
 Methods:
+    instance methods:
     __init__(self, width, height, x=0, y=0, id=None)
+    area(self): returns the area value of the Rectangle instance
+    desplay: prints in stdout the Rectangle instance with the character '#'
 
 The Rectangle class includes public getter and setter methods for each of its
 private attributes, ensuring encapsulation and validation where necessary.
@@ -126,5 +129,6 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
         for _ in range(self.height):
             print("#" * self.width)
