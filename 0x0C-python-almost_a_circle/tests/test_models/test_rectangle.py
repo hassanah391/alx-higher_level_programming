@@ -38,6 +38,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(Rec.y, 4)
 
     def test_exceptions_atrributes(self):
+
         Rec = Rectangle(10, 20)
         # test TypeError exception
         with self.assertRaises(TypeError):
@@ -57,3 +58,11 @@ class TestRectangle(unittest.TestCase):
             Rec.x = -1
         with self.assertRaises(ValueError):
             Rec.y = -2
+
+    def test_area(self):
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area(), 6)
+        r2 = Rectangle(2, 10)
+        self.assertEqual(r2.area(), 20)
+        r3 = Rectangle(8, 7)
+        self.assertEqual(r3.area(), 56)
