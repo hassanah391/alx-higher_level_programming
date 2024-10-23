@@ -129,9 +129,16 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """prints in stdout the Rectangle instance with the character #"""
+        """prints in stdout the Rectangle instance with the character '#'
+        by taking care of x and y"""
+        # Print vertical offset (empty lines for y)
+        for _ in range(self.y):
+            print()
+
+        # Print each row of the rectangle
         for _ in range(self.height):
-            print("#" * self.width)
+            # Print horizontal offset (spaces for x)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
