@@ -25,6 +25,7 @@ private attributes, ensuring encapsulation and validation where necessary.
 
 
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -40,6 +41,7 @@ class Rectangle(Base):
             __init__(self, width, height, x=0, y=0, id=None):
             Initializes a new Rectangle instance.
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ initlizes instance attributes"""
         # Validates height
@@ -144,3 +146,22 @@ class Rectangle(Base):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} "
                 f"- {self.width}/{self.height}")
+
+    def update(self, *args):
+        """
+    Updates the Rectangle attributes using positional arguments.
+
+    Args:
+        *args: Variable length argument list
+            - 1st argument represents id
+            - 2nd argument represents width
+            - 3rd argument represents height
+            - 4th argument represents x
+            - 5th argument represents y
+    """
+        # List of attributes in the order they should be updated
+        attributies = ["id", "width", "height", "x", "y"]
+        # Update each attribute if a corresponding argument was provided
+        for i in range(len(args)):
+            if i < len(attributies):
+                setattr(self, attributies[i], args[i])
