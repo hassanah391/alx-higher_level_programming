@@ -23,8 +23,9 @@ class Square(Rectangle):
             raise TypeError("size must be an integer")
         elif size <= 0:
             raise ValueError("size must be > 0")
-        # inherits Rectangle attributes
-        super().__init__(id=id, width=size, height=size, x=x, y=y)
+        else:
+            # inherits Rectangle attributes
+            super().__init__(id=id, width=size, height=size, x=x, y=y)
 
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
