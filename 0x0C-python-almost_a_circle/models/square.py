@@ -18,6 +18,11 @@ class Square(Rectangle):
     in module rectangle."""
     def __init__(self, size, x=0, y=0, id=None):
         """ initlizes instance attributes"""
+        # Validates size
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        elif size <= 0:
+            raise ValueError("size must be > 0")
         # inherits Rectangle attributes
         super().__init__(id=id, width=size, height=size, x=x, y=y)
 
