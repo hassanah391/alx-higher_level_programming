@@ -14,7 +14,7 @@ from models.square import Square
 class TestSquare(unittest.TestCase):
     def setUp(self):
         obj1 = Square(3, 1, 3)
-    
+
     def test_str(self):
         obj1 = Square(3, 1, 3, 3)
         self.assertEquals(obj1.__str__(), "[Square] (3) 1/3 - 3")
