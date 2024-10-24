@@ -18,7 +18,7 @@ class Square(Rectangle):
     in module rectangle."""
     def __init__(self, size, x=0, y=0, id=None):
         """ initlizes instance attributes"""
-            # inherits Rectangle attributes
+        # inherits Rectangle attributes
         super().__init__(id=id, width=size, height=size, x=x, y=y)
         self.size = size
 
@@ -33,7 +33,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
-    
+
     def update(self, *args, **kwargs):
         """
         If args: set attributes in this order: id, width, height, x, y
@@ -58,4 +58,3 @@ class Square(Rectangle):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
-
