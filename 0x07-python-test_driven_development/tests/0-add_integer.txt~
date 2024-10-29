@@ -1,0 +1,27 @@
+"""
+This file is for testing the function
+
+add_integer that return summation of 2 integers
+
+Using doctest module:
+
+>>> import 0-add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(4, "School")
+b must be an integer
+
+>>> add_integer(None)
+a must be an integer
+"""
