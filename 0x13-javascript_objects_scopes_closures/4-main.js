@@ -3,7 +3,7 @@ const Rectangle = require('./4-rectangle');
 
 const r1 = new Rectangle(2, 3);
 console.log('Normal:');
-r1.print();
+r1.print('C');
 
 console.log('Double:');
 r1.double();
