@@ -16,7 +16,13 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Execute SQL query to select states starting with 'N'
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%';")
+    cur.execute("\
+                SELECT * \
+                FROM states \
+                WHERE name \
+                LIKE BINARY 'N%' \
+                ORDER BY id ASC;\
+                ")
 
     # Fetch all matching rows
     rows = cur.fetchall()
