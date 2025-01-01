@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module that prints the first State object from the database hbtn_0e_6_usa"""
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,7 +16,7 @@ if __name__ == '__main__':
     session = Session()
 
     # Fetch first row in states table ordered by id
-    first_row = session.query(State).order_by(State.id).first()
+    first_row = session.query(State.id, State.name).order_by(State.id).first()
     if first_row:
         print("{}: {}".format(first_row.id, first_row.name))
     else:
