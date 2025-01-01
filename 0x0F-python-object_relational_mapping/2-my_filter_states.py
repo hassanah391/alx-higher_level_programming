@@ -22,7 +22,7 @@ if __name__ == "__main__":
                 FROM states \
                 WHERE name = '{}'\
                 ORDER BY id ASC;\
-                ".format(searchedName.replace("'", "''")))
+                ".format(searchedName))
 
     # Fetch all matching rows
     rows = cur.fetchall()
