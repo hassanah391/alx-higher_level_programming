@@ -37,7 +37,6 @@ if __name__ == "__main__":
     else:
         print()
 
-
     # Close the cursor and the database connection
     cur.close()
     db.close()
