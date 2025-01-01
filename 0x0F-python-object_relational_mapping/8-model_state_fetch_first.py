@@ -15,7 +15,7 @@ if __name__ == '__main__':
     session = Session()
 
     # Fetch first row in states table ordered by id
-    first_row = session.query(State.id, State.name).order_by(State.id).first()
+    first_row = session.query(State).order_by(State.id).first()
     if first_row:
         print("{}: {}".format(first_row.id, first_row.name))
     else:
