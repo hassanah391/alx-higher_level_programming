@@ -49,4 +49,3 @@ This repository contains various Python scripts and SQL files for working with S
 
 ## License
 Feel free to modify the content as needed!
-Feel free to modify the content as needed!
