@@ -17,7 +17,7 @@ Example:
     ./model_state.py <mysql username> <mysql password> <database name>
 """
 
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import create_engine, Column, Integer, String
 
 Base = declarative_base()
@@ -37,6 +37,7 @@ class State(Base):
     id = Column(Integer, autoincrement=True, nullable=False, unique=True,
                 primary_key=True)
     name = Column(String(128), nullable=False)
+    cities = relationship("City", back_populates="state")
 
 
 if __name__ == "__main__":
